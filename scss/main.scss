@@ -1,0 +1,454 @@
+@import "colores.scss";
+
+
+html, body {
+    font-family: 'EB Garamond', serif;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+header {
+    width: 100%;
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    justify-content:space-between;
+    padding-left: 120px;
+    padding-right: 120px;
+    padding-top: 10px;
+    background-color: $color-black;
+    z-index: 1;
+    border-bottom: 1px solid $color-darkgray;
+}
+
+
+/* Media query para el header mobile */
+@media (max-width: 768px) {
+    header {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items:flex-start;
+        padding-left: 20px;
+        padding-right: 20px;
+        border-bottom: 1px solid $color-darkgray;
+    }
+}
+
+nav ul {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    flex-wrap: wrap;
+    padding-top: 20px;
+    gap: 40px;
+    list-style: none;
+    font-family: sans-serif;
+    font-size: 15px;
+}
+/* Media query para el navegador mobile */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 10px;
+        font-size: 15px;
+        padding-bottom: 10px;
+        gap: 5px;
+    }
+}
+
+#logo-nav{
+    font-family: sans-serif;
+}
+
+#logo-nav a {
+    color: $color-gray;
+}
+
+
+#logo-nav a:hover {
+    color: $color-naranja;
+}
+
+
+nav li a {
+    color:$color-gray;
+}
+
+nav li a:hover {
+    color: $color-gray;
+}
+
+nav li{
+text-decoration: none;
+background-image: linear-gradient($color-gray, $color-gray);
+background-position: 0% 100%;
+background-repeat: no-repeat;
+background-size: 0% 2px;
+transition: all 0.3s;
+}  
+
+nav li:hover {
+    transform: scale(1.1);
+}
+
+
+nav li:hover, a:focus {
+    background-size: 100% 2px;
+}
+
+
+main#containerPrincipal {
+    background-color: $color-black;
+    min-height: 95vh;
+    padding: 200px 360px 80px 360px;
+    border-bottom: 1px solid $color-gray;
+}
+
+@media (max-width: 768px) {
+    main#containerPrincipal {
+        padding: 0px 20px 20px 20px;
+    }
+}
+
+#tituloHome {
+    font-family: 'EB Garamond', serif;
+    font-size: 10em;
+    line-height: 1em;
+    color:$color-white;
+    margin: 0px;
+}
+
+#parrafoHome {
+    font-family: 'EB Garamond', serif;
+    font-size: 2em;
+    color:$color-white;
+    padding-top: 40px;
+}
+
+#parrafoHome strong {
+    color:$color-naranja;
+}
+
+/* Media query para el lema mobile */
+@media (max-width: 768px) {
+    #tituloHome {
+        font-size: 4em;
+        line-height: 1em;
+        padding-top: 220px;
+    }
+    #parrafoHome {
+        padding-top: 20px;
+        font-size: 24px;
+        line-height: 1.5em;
+    }
+}
+
+.nosotros {
+    font-family: 'EB Garamond', serif;
+    font-size: 2em;
+    color:$color-darkgray;
+    padding: 240px 360px 40px 360px;
+}
+
+.tituloSeccion{
+    color: $color-white;
+    position: absolute;
+    top: 25%;
+    left: 25%;
+}
+
+#containerWorks{
+    z-index: 2;
+    background-color: $color-naranja;
+    
+}
+
+
+#containerServicios{
+    background-color: $color-white;
+    min-width: 100vw;
+}
+
+h3 {
+    color:$color-black;
+    background-color: $color-white;
+    font-family: sans-serif;
+    font-size: 30px;
+    margin: 0px;
+    padding: 120px 120px 0px 120px;
+}
+
+.galeriaServicios {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 60px;
+    padding: 40px 25% 120px 120px;
+}
+
+.servicios {
+    border-style: solid;
+    border-top: 1px solid $color-darkgray;
+    border-right: 0px;   
+    border-bottom: 0px;
+    border-left: 0px;
+    color:$color-gray;
+    padding: 2px 0px 0px 0px;
+}
+
+.servicios h5 {
+    font-family: sans-serif;
+    font-size: 20px;
+    color:$color-darkgray;
+    margin: 0px;
+    padding: 8px 0px 0px 0px;
+}
+
+.servicios p {
+    font-family: sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+    color: $color-darkgray;
+    margin: 0px;
+    padding: 10px 0px 0px 0px;
+}
+
+/* Media query para servicios mobile */
+@media (max-width: 768px) {
+    .galeriaServicios {
+        display: flex;
+        flex-direction: column;
+        padding: 0px 20px 40px 20px;
+        font-size: 5em;
+        gap: 40px;
+    }
+
+    .nosotros {
+        font-size: 22px;
+        line-height: 40px;
+        color: $color-white;
+        background-color: $color-black;
+        padding: 320px 20px 30px 20px;
+    }
+
+    .servicios {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        text-align: center;
+        font-size: 1.2 em;
+        border-top: 1px solid $color-darkgray;
+        padding: 0px;
+    }
+
+    h3 {
+        font-size: 30px;
+        text-align: center;
+        padding: 240px 20px 40px 20px;
+    }
+
+    .servicios h5 {
+        padding-top: 12px;
+    }
+}
+
+    .containerArchivo {
+        
+        display: grid;
+        grid-template-columns: 4fr 4fr 4fr;
+        margin: 80px 360px 50px 360px; 
+        border-bottom: 1px solid $color-darkgray;
+    }
+
+    .containerArchivo .card {
+        border: 0px;
+        // max-width: 100%;    
+    }
+
+    .containerArchivo .card p {
+        font-family: sans-serif;
+        font-size: 14px;
+        color: $color-darkgray;
+        padding: 40% 50% 50% 0%;   
+    }
+
+    /* Media query para page archivo */
+
+    @media (max-width: 768px) {
+    .containerArchivo {
+    display: flex;
+    flex-direction: column;
+    margin: 20px 20px 0px 20px;
+    gap: 40px;
+    padding: 20px 0px 40px 0px;
+    font-size: 5em;
+    }
+    }
+
+#containerMetodo{
+    background-color: $color-naranja;
+    min-width: 100vw;
+    min-height: 100vh;
+}
+
+.nuestroMetodo ol {
+    font-size: 25px;
+    color: $color-white;    
+}
+
+.nuestroMetodo p {
+    font-size: 25px;
+    color: $color-white;
+    padding-left: 120px;
+    padding-right: 120px;
+   }
+ 
+   .nuestroMetodo ol{
+    padding-left: 120px;
+    padding-right: 120px;
+   }
+
+   /* Media query para metodo mobile */
+    @media (max-width: 768px) {
+    .nuestroMetodo {
+        padding: 0px;
+        }
+
+    .nuestroMetodo p{
+            padding:20px
+           }
+
+    .nuestroMetodo ol{
+            padding-left: 40px;
+            padding-right: 20px;
+            padding-bottom: 60px;
+           }
+    }
+
+    footer{
+        background-color: $color-black;
+        min-height: 25vh;
+    }
+
+    footer h4 {
+        color: $color-white;
+        font-family: sans-serif;
+        text-align: center;
+        margin: 0px;
+        font-size: 32px;
+        padding: 100px 120px 30px 120px
+    }
+
+    footer ul {
+        display: flex;
+        justify-content:center;
+        list-style: none;
+        margin: 0px;
+        padding: 0px;
+    }
+
+    footer ul li {
+        text-decoration: none;
+        font-family: sans-serif;
+        font-size: 17px;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    footer li:hover {
+        transform: scale(1.15);
+        transition: all 0.15s ease-out;
+    }
+
+    footer ul li a {
+        color: $color-gray;
+        text-decoration: none;
+    }
+
+    footer ul li a:hover {
+        color: $color-gray;
+    }
+
+      /* Media query para footer */
+@media (max-width: 768px) {
+
+    footer {
+        min-height: 25vh;
+        margin-bottom: 20px;
+        }
+
+        footer h4 {
+        font-size: 25px;
+        padding: 40px 20px 20px 20px;
+        }
+
+        footer ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 14px;
+        font-size: 20px;
+        padding-bottom: 30px;
+        gap: 4px;
+        }
+
+        
+    }
+   
+
+   form{
+    position: absolute;
+    top: 25%;
+    bottom: 25%;
+    left: 25%;
+    right: 25%;
+    background-color: $color-white;
+
+   }
+
+form {
+    display: grid;
+    grid-template-areas: 
+    "nombre nombre nombre nombre"
+    "telefono correo correo turno";
+    grid-template-columns: repeat(4 fr);
+    grid-template-rows: (10px 10px);
+    }
+
+.nombre {
+    grid-area: nombre;
+}
+
+.telefono {
+    grid-area: telefono;
+}
+.mail {
+    grid-area: correo;
+}
+
+.turno {
+    grid-area: turno;
+}
+
+
+#contact{
+   padding: 80px 50% 40px 120px;
+   min-height: 100vh;
+}
+
+/* Media query para formulario de contacto */
+@media (max-width: 768px) {
+#contact{
+    padding: 20px 20px 30px 20px;
+}
+}
+
+
+
+
